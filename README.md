@@ -9,3 +9,8 @@ número inteiro não negativo;</p>
 de armazenar um valor real;</p>
 <p>(MEM): devolve o valor armazenado na memória. Se a memória não tiver sido usada
 devolve o número real zero.</p>
+<h2>Linguagem utilizada:</h2>
+<ul>
+  <li>Python</li>
+</ul>
+

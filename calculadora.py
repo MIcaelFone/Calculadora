@@ -74,6 +74,7 @@ def resultado(linha_comandoresultado,calculos):
             print(resultado)   
 
 
+
 def memoria(linha_comando_de_memoria,calculos):
                 
     #Verificando digitos
@@ -91,13 +92,13 @@ def memoria(linha_comando_de_memoria,calculos):
         int_linha_comando_memoria = [int(num) for num in valores]
 
 
-
 def calculadora(arquivo):
     
     with open(arquivo+".txt", "r") as arquivo:
 
         #ler o arquivo
         calculos = arquivo.readlines()
+
 
         # separar os valores do parenteses
         for linha in calculos:
@@ -121,11 +122,10 @@ def calculadora(arquivo):
 
             #pegar comando da memoria
 
-            comando_de_memoria = re.findall(r'MEM', linha)
+            comando_de_memoria = "MEM"
 
             comando_de_memoria = ", ".join(comando_de_memoria)
             
-
             comando_de_memoria = comando_de_memoria.replace(" ", ",")
 
             #linha do comando do resultado
@@ -140,6 +140,7 @@ def calculadora(arquivo):
 
             elif(nome_do_comando_de_memoria):
                 memoria(linha_comando_de_memoria,calculos)
+
 
 calculadora(arquivo)                               
 
